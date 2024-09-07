@@ -1,0 +1,63 @@
+@startuml flow-diagram update user
+
+|User|
+start
+
+:Authenticate and verify token;
+if (Token or authentication invalid?) then (Yes)
+    :Redirect to /auth;
+    stop
+else (No)
+endif
+
+
+:Obtain LDAP client\nand session data;
+
+:Validate form;
+if (Form invalid?) then (Yes)
+    :Error 400 - Invalid form;
+    stop
+else (No)
+endif
+
+:Get user by DN;
+if (User not found?) then (Yes)
+    :Error 404 - User not found;
+    stop
+else (No)
+endif
+
+:Prepare changes for modification;
+
+if (Applicable changes?) then (Yes)
+    :Attempt to modify user;
+    if (Error during modification?) then (Yes)
+        :Handle errors;
+        :Return message;
+        stop
+    else (No)
+    endif
+else (No)
+    :Error 400 - No changes to apply;
+    stop
+endif
+
+:Update DN if necessary;
+if (Error during DN update?) then (Yes)
+    :Handle errors;
+    :Return message;
+    stop
+else (No)
+endif
+
+:Get updated user;
+if (Self-updating?) then (Yes)
+    :Update session and cookies;
+else (No)
+    :Log profile update;
+endif
+
+:Return response with details;
+stop
+
+@enduml

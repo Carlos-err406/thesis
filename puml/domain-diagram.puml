@@ -1,0 +1,68 @@
+@startuml domain diagram
+
+object DirectorioActivo {
+    url
+    usuarios
+    grupos
+    unidades organizacionales
+}
+
+object Usuario {
+    nombre
+    apellidos
+    identificación de usuario
+    grupos
+    permisos
+    contraseña
+
+}
+
+object Grupo {
+    nombre
+    miembros
+    descripción
+}
+
+object ListaDeDistribucion {
+    correo
+}
+
+object ConsolaDeAdmin {
+    dominio
+    dominio del directorio
+}
+
+object Administrador {
+    restricción de eliminación
+    permisos de administración
+}
+
+object GrupoDeAdministradores {
+    zona de administración
+}
+
+object UnidadesOrganizacionales {
+    nombre
+    descripción
+    entidad padre
+    entidades hijas
+}
+
+
+DirectorioActivo "1   " <-- "1..*     " ConsolaDeAdmin
+DirectorioActivo "1   " *--- "1..* " Grupo
+DirectorioActivo "1   " *-- "1..*" Usuario
+DirectorioActivo "1   " *- "1..*" UnidadesOrganizacionales
+
+
+ListaDeDistribucion <|- Grupo
+Grupo"0..*" <- "1" Grupo
+Grupo <|-- GrupoDeAdministradores
+GrupoDeAdministradores "1" *-- "1..*  "Administrador
+Usuario <|-- Administrador
+Grupo "1" o-- "0..*" Usuario
+
+UnidadesOrganizacionales "1  " o-- "0..*"Usuario
+UnidadesOrganizacionales "1  " o-- "0..*"Grupo
+UnidadesOrganizacionales "1  " o-- "0..*"UnidadesOrganizacionales
+@enduml

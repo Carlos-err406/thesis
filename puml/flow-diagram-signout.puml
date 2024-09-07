@@ -1,0 +1,12 @@
+@startuml flow-diagram signout
+start
+:Check if user is authenticated;
+if (User is authenticated?) then (Yes)
+    :Delete session cookie;
+    :Delete access cookie;
+else (No)
+endif
+    :Log sign-out event;
+    :Redirect to auth page (/auth);
+stop
+@enduml

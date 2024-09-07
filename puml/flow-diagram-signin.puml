@@ -1,0 +1,24 @@
+@startuml flow-diagram signin
+start
+:Receive form data;
+:Validate captcha and form;
+if (Captcha valid?) then (Yes)
+    :Extract email, password;
+    :Get LDAP client instance;
+    :LDAP bind with user credentials;
+    if (Bind successful?) then (Yes)
+        :Get user from Active Directory;
+        :Generate session token;
+        :Generate access token;
+        :Set session cookie;
+        :Set access cookie;
+        :Log sign-in event;
+        :Redirect to users profile;
+    else (No)
+        :Return error based on LDAP error code;
+    endif
+else (No)
+    :Return error: Invalid captcha;
+endif
+stop
+@enduml

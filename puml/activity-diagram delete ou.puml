@@ -1,0 +1,41 @@
+@startuml activity-diagram delete ou
+
+|Administrator|
+start
+
+:Select OU to delete;
+
+|System|
+:Show warning about potential danger;
+
+|Administrator|
+if (Proceed with deletion?) then (No)
+    :Cancel deletion;
+else (No)
+    |System|
+    :Check if OU is empty;
+    if (OU has children?) then (Yes)
+        if(Is recursive delete enabled?) then (No)
+            :Show error to user;
+
+            |Administrator|
+
+            :See error message;
+            stop
+        else (Yes)
+            |System|
+            :Delete all entries\ninside the OU\nrecursively;
+        endif
+    else (No)
+    endif
+        |System|
+        :Delete OU;
+        :Save operation record;
+        :Return success message;
+        |Administrator|
+        :Receive success message;
+        stop;
+
+endif
+stop
+@enduml

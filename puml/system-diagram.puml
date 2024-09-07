@@ -1,0 +1,49 @@
+@startuml system-diagram
+actor Administrator as admin
+actor :Usuario: as user
+actor :Directorio Activo: as activeDirectory
+
+note bottom of activeDirectory: Este actor está involucrado en\ntodos los casos de uso excepto\n"Ver logs"
+
+(Ver logs) as logs
+
+(Crear\nusuario) as createUser
+(Obtener\nlistado\nde usuarios) as listUsers
+(Eliminar\nusuario) as deleteUser
+(Editar usuario) as editUser
+(Cambiar\ncontraseña\nde usuarios) as changeUserPassword
+
+(Obtener\nlistado\nde grupos) as listGroups
+(Crear\ngrupo) as createGroup
+(Eliminar\ngrupo) as deleteGroup
+(Editar\ngrupo) as editGroup
+(Modificar\nmiembros\nde un grupo) as setGroupMembers
+
+(Autenticarse) as login
+
+(Cambiar\ncontraseña\npropia) as changeSelfPassword
+(Editar\natributos\npropios) as updateSelfUser
+
+user <|-- admin
+
+logs <-- admin
+
+admin --> listGroups
+admin --> listUsers
+admin --> createGroup
+admin -> createUser
+editUser<--admin
+editGroup<-admin
+deleteGroup<--admin
+deleteUser<--admin
+admin --> setGroupMembers
+login <- user
+admin --> changeUserPassword
+
+
+user --> updateSelfUser
+user --> changeSelfPassword
+
+@enduml
+
+

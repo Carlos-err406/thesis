@@ -1,0 +1,37 @@
+@startuml activity-diagram create user
+|Administrator|
+start
+:Submit Create User Form;
+
+|Backend|
+if (Form Valid?) then (yes)
+    :Check User Creation Limits;
+
+    if (Can Create More Users?) then (yes)
+        :Retrieve Base Entry;
+        :Construct User Attributes;
+        :Add User to LDAP;
+
+        if (User Added Successfully?) then (yes)
+            if (Base is Group?) then (yes)
+                :Add User to Group;
+            endif
+            :Return Success;
+        else (no)
+            :Handle Errors;
+            :Return Error (e.g., AlreadyExistsError, InsufficientAccessError);
+        endif
+    else (no)
+        :Handle User Creation Limits Error;
+        :Return Error (e.g., Reached User Limit);
+    endif
+else (no)
+    :Handle Form Validation Error;
+    :Return Error (e.g., Invalid Form Data);
+endif
+
+|Administrator|
+:See the result;
+
+stop
+@enduml

@@ -1,0 +1,50 @@
+@startuml flow-diagram update group
+
+|Administrator|
+start
+
+if (Authentication valid?) then (Yes)
+else (No)
+    :Redirect to /auth;
+    stop
+endif
+if (Form invalid?) then (Yes)
+    :Error 400 - Invalid form;
+    stop
+else (No)
+endif
+
+:Obtain LDAP and session;
+if (Group not found?) then (Yes)
+    :Error 404 - Group not found;
+    stop
+else (No)
+endif
+
+if (Applicable changes?) then (Yes)
+    :Attempt to modify group;
+    if (Error during modification?) then (Yes)
+        :Handle errors;
+        :Return message;
+        stop
+    else (No)
+    endif
+else (No)
+    :Error 400 - No changes to apply;
+    stop;
+endif
+
+if (sAMAccountName changed?) then (Yes)
+    :Update DN with\nnew sAMAccountName;
+    if (Error during DN update?) then (Yes)
+        :Handle errors;
+    else (no)
+    endif
+else (no)
+endif
+
+:Log operation;
+:Return response with details;
+stop
+
+@enduml

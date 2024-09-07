@@ -1,0 +1,19 @@
+@startuml sequence diagram form submission
+
+actor User
+participant UI
+participant "Form Action" as FormAction
+participant "LDAP Service" as LDAPService
+participant LDAP
+
+
+User     ->  UI:             Fills the data
+UI          ->  FormAction:     Sends form data
+FormAction  ->  LDAPService:    Validates data and calls\ndata access service
+LDAPService ->  LDAP:           Performs the operation\nusing ldapts client
+LDAP        --> LDAPService:    Operation response
+LDAPService --> FormAction:     Returns the result\nof the operation
+FormAction  --> UI:             Updates the UI\nwith the result
+UI          --> User:        Shows the result\nto the user
+
+@enduml
