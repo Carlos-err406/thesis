@@ -6,11 +6,16 @@ actor :Directorio Activo: as activeDirectory
 note bottom of activeDirectory: Este actor está involucrado en\ntodos los casos de uso excepto\n"Ver logs"
 
 (Ver logs) as logs
+(Obtener\nlistado\nde OUs) as listOus
+(Crear\nOU) as createOU
+(Eliminar\nOU) as deleteOU
+(Editar\nOU) as editOU
+(Modificar\nentradas\nde un OU) as setOUEntries
 
+(Editar usuario) as editUser
+(Eliminar\nusuario) as deleteUser
 (Crear\nusuario) as createUser
 (Obtener\nlistado\nde usuarios) as listUsers
-(Eliminar\nusuario) as deleteUser
-(Editar usuario) as editUser
 (Cambiar\ncontraseña\nde usuarios) as changeUserPassword
 
 (Obtener\nlistado\nde grupos) as listGroups
@@ -18,6 +23,7 @@ note bottom of activeDirectory: Este actor está involucrado en\ntodos los casos
 (Eliminar\ngrupo) as deleteGroup
 (Editar\ngrupo) as editGroup
 (Modificar\nmiembros\nde un grupo) as setGroupMembers
+
 
 (Autenticarse) as login
 
@@ -28,17 +34,25 @@ user <|-- admin
 
 logs <-- admin
 
-admin --> listGroups
-admin --> listUsers
-admin --> createGroup
-admin -> createUser
-editUser<--admin
-editGroup<-admin
-deleteGroup<--admin
-deleteUser<--admin
-admin --> setGroupMembers
+createOU <--- admin
+editOU <--- admin
+deleteOU <--- admin
+listOus <--- admin
+setOUEntries <--- admin
+
+admin ---> listGroups
+admin ---> listUsers
+admin ---> createGroup
+admin --> createUser
+
+editUser <-- admin
+editGroup <- admin
+admin -> deleteGroup
+admin --> deleteUser
+
+admin ---> setGroupMembers
 login <- user
-admin --> changeUserPassword
+admin ---> changeUserPassword
 
 
 user --> updateSelfUser

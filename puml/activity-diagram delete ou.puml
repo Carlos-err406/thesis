@@ -11,31 +11,28 @@ start
 |Administrator|
 if (Proceed with deletion?) then (No)
     :Cancel deletion;
-else (No)
+    end
+else (Yes)
     |System|
     :Check if OU is empty;
     if (OU has children?) then (Yes)
         if(Is recursive delete enabled?) then (No)
             :Show error to user;
-
             |Administrator|
-
             :See error message;
-            stop
+            end
         else (Yes)
             |System|
             :Delete all entries\ninside the OU\nrecursively;
         endif
     else (No)
     endif
-        |System|
-        :Delete OU;
-        :Save operation record;
-        :Return success message;
-        |Administrator|
-        :Receive success message;
-        stop;
-
+    |System|
+    :Delete OU;
+    :Save operation log;
+    :Return success message;
+    |Administrator|
+    :Receive success message;
 endif
 stop
 @enduml

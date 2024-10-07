@@ -1,0 +1,32 @@
+@startuml convention over configuration
+
+start
+
+:Aplicación iniciada;
+if (¿Existe archivo\nde configuración?) then (Sí)
+    :Verificar extensión del archivo;
+    if(¿Es JSON?) then (Sí)
+        :Usar JSON Parser;
+    else (No)
+        if(¿Es YAML?) then (Sí)
+            :Usar YAML Parser;
+        else (No)
+            :Lanzar error\n(Formato no soportado);
+            end
+        endif
+    endif
+    :Validar configuración\ncontra el esquema;
+    if(¿Configuración es válida?) then (No)
+        :Lanzar error\n(Configuración inválida);
+        end
+    else (Sí)
+        :Usar configuración\npersonalizada;
+        :Rellenar valores\nfaltantes con la\nconvención por defecto;
+    endif
+else (No)
+    :Lanzar error\n(Archivo de\nconfiguración\nfaltante);
+    end
+endif
+:Hacer disponible\nlos parámetros\nde configuración\na la aplicación;
+stop
+@enduml
