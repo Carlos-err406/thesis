@@ -1,2 +1,14 @@
 entrega - diseño de software.docx
 bib - *.pdf
+
+*.aux
+*.toc
+*.gz
+*.out
+*.log
+*.lot
+*.lof
+*.fls
+*.fdb*
+
+audio_transcriptions/
