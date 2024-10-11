@@ -1,0 +1,61 @@
+\subsubsection{Clientes LDAP}
+
+LDAP se ha consolidado como un estándar esencial en la administración de AD. Su capacidad para gestionar y acceder a información jerárquica de manera eficiente ha hecho que múltiples aplicaciones y servicios adopten clientes LDAP para interactuar con los directorios.
+
+En este epígrafe, se proporciona una definición de cliente LDAP basada en la literatura, se exponen sus características principales, se explica la importancia del uso de estos clientes y se exploran diversos clientes LDAP disponibles, analizando sus características, ventajas y limitaciones.
+
+\textbf{¿Qué es un cliente LDAP?}
+
+Un cliente LDAP es una aplicación o herramienta que permite a los usuarios y sistemas interactuar con un servidor de AD. Su función principal es facilitar la comunicación con el directorio, permitiendo que se realicen operaciones como búsquedas, modificaciones, adiciones y eliminaciones de entradas en la base de datos del directorio. Estos clientes actúan como intermediarios que traducen las solicitudes de los usuarios o aplicaciones a un formato comprensible para el directorio, simplificando la interacción y mejorando la eficiencia en la administración de datos.
+
+\textbf{Capacidades de los clientes LDAP}
+\begin{itemize}
+    \item \textbf{Búsquedas}: Los clientes LDAP pueden realizar búsquedas en el directorio para encontrar información específica basada en varios criterios. Esto es crucial para aplicaciones que necesitan recuperar datos de manera rápida y eficiente.
+    \item \textbf{Modificaciones}: Permiten actualizar la información existente en el directorio. Las modificaciones pueden incluir cambios en atributos de una entrada o actualizaciones de múltiples entradas simultáneamente.
+    \item \textbf{Adiciones}: Los clientes LDAP facilitan la adición de nuevas entradas en el directorio. Esto es útil para la incorporación de nuevos usuarios, dispositivos o cualquier otra entidad que necesite ser gestionada dentro del directorio.
+    \item \textbf{Eliminaciones}: También soportan la eliminación de entradas del directorio, ayudando a mantener la información actualizada y eliminando datos obsoletos o incorrectos.
+\end{itemize}
+
+\textbf{Abstracción de la lógica}
+
+La abstracción de la lógica en la interacción con el directorio mediante un cliente LDAP es fundamental por varias razones:
+
+\begin{itemize}
+    \item \textbf{Simplicidad y Eficiencia}: Al utilizar un cliente LDAP, los desarrolladores y administradores no necesitan conocer los detalles específicos del protocolo LDAP. Esto simplifica el desarrollo y la administración, permitiendo centrarse en la lógica de negocio en lugar de en los detalles técnicos.
+    \item \textbf{Interoperabilidad}: Los clientes LDAP son compatibles con múltiples sistemas y aplicaciones, lo que facilita la integración de diversas soluciones en una infraestructura común. Esto es crucial para la interoperabilidad entre sistemas heterogéneos.
+    \item \textbf{Seguridad}: Al centralizar las peticiones a través de un cliente LDAP, es posible implementar políticas de seguridad consistentes, como autenticación y autorización, garantizando que solo usuarios y aplicaciones autorizadas puedan acceder y modificar la información del directorio.
+\end{itemize}
+
+\textbf{Comparación entre clientes LDAP existentes}
+
+La elección del cliente LDAP adecuado es crucial para gestionar eficientemente un AD. Con la creciente variedad de opciones disponibles, es fundamental entender las diferencias y capacidades de cada cliente LDAP.
+En la Tabla 4 se comparan varios clientes LDAP, evaluando aspectos clave que pueden influir en la elección de una solución:
+
+\begin{itemize}
+    \item \textbf{Dependencia de ldapjs}: Indica si el cliente LDAP tiene dependencia de la biblioteca ldapjs. Esto es relevante debido a la descontinuación de ldapjs, que hasta el 14 de Mayo de 2024 era ampliamente utilizada. Esta evaluación asegura la selección de soluciones que ofrecen una base estable y sostenible, minimizando riesgos asociados con la obsolescencia y garantizando la compatibilidad a largo plazo con el ecosistema LDAP.
+    \item \textbf{Soporte TypeScript}: La compatibilidad con TypeScript no solo permite el desarrollo más seguro y estructurado de aplicaciones modernas, sino que también mejora significativamente la detección de errores en tiempo de desarrollo.
+    \item \textbf{Calidad de la documentación}: La disponibilidad y calidad de la documentación afecta directamente la rapidez con la que los desarrolladores pueden familiarizarse con el cliente LDAP y resolver problemas.
+    \item \textbf{Comunidad}: Una comunidad activa y un soporte sólido aseguran que los problemas se resuelvan rápidamente y que el cliente LDAP se mantenga actualizado con las mejores prácticas. El nivel de actividad de la comunidad y la frecuencia de las actualizaciones pueden variar, impactando la estabilidad y la confianza en el uso a largo plazo del cliente.
+    \item \textbf{Facilidad de uso}: Evalúa la simplicidad y la curva de aprendizaje del cliente LDAP. Una alta facilidad de uso reduce el tiempo de integración y minimiza errores durante la implementación. Esto incluye si el cliente provee abstracciones y/o funciones de alto nivel, lo cual puede facilitar significativamente su uso.
+\end{itemize}
+
+\newgeometry{vmargin=1.4cm,hmargin=0.8cm}
+\begin{landscape}
+    \begin{longtable}{|l|p{3cm}|p{2.5cm}|p{6cm}|p{5cm}|p{6cm}|}
+        \caption{Tabla comparativa entre distintos clientes LDAP}
+        \label{table:ldap-client-comparison}                                                                                                                                                                                                                                                                                                                                                                                                               \\
+        \hline
+        \textbf{Cliente LDAP} & \textbf{Dependencia de ldapjs} & \textbf{Soporta TypeScript} & \textbf{Calidad de la documentación}                                                                                                       & \textbf{Comunidad y soporte (en julio 2024)}                                          & \textbf{Facilidad de uso}                                                                                              \\
+        \hline
+        \endfirsthead
+        ldapts                & No                             & Sí                          & Excelente, documentación completa y fácil de entender, con ejemplos detallados.                                                            & Activa y sólida, ultima publicación en Mayo 2024 y más de 24 mil descargas semanales. & Alta, fácil de usar y aprender, con una curva de aprendizaje baja. Provee abstracciones para la composición de filtros \\
+        \hline
+        ldap-client           & No                             & No                          & Buena, documentación adecuada, pero básica. Cubre la mayoría de los casos de uso comunes, aunque carece de ejemplos avanzados.             & Baja, última publicación 2016, con 20 descargas semanales.                            & Media, requiere algún tiempo de aprendizaje, pero es manejable. No provee abstracciones para la composición de filtros \\
+        \hline
+        activedirectory       & Sí                             & No                          & Buena, documentación adecuada, con suficiente información para la configuración y uso básico, aunque podría mejorar en detalle y ejemplos. & Moderada, ultima publicación 2016, con 10 mil descargas semanales                     & Media, interfaz familiar, provee funciones de más alto nivel  específicas  para la busqueda de usuarios y grupos.      \\
+        \hline
+        ldap-ts-client        & Sí                             & Sí                          & Escasa, documentación con poca información disponible y pocos ejemplos.                                                                    & Baja, ultima publicación 2022, con 51 descargas semanales                             & Baja, debido a la falta de documentacion.                                                                              \\
+        \hline
+    \end{longtable}
+\end{landscape}
+\restoregeometry
