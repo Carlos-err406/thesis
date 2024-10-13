@@ -29,7 +29,7 @@ La abstracción de la lógica en la interacción con el directorio mediante un c
 \textbf{Comparación entre clientes LDAP existentes}
 
 La elección del cliente LDAP adecuado es crucial para gestionar eficientemente un AD. Con la creciente variedad de opciones disponibles, es fundamental entender las diferencias y capacidades de cada cliente LDAP.
-En la Tabla 4 se comparan varios clientes LDAP, evaluando aspectos clave que pueden influir en la elección de una solución:
+En la \autoref{table:ldap-client-comparison} se comparan varios clientes LDAP, evaluando aspectos clave que pueden influir en la elección de una solución:
 
 \begin{itemize}
     \item \textbf{Dependencia de ldapjs}: Indica si el cliente LDAP tiene dependencia de la biblioteca ldapjs. Esto es relevante debido a la descontinuación de ldapjs, que hasta el 14 de Mayo de 2024 era ampliamente utilizada. Esta evaluación asegura la selección de soluciones que ofrecen una base estable y sostenible, minimizando riesgos asociados con la obsolescencia y garantizando la compatibilidad a largo plazo con el ecosistema LDAP.
@@ -42,7 +42,7 @@ En la Tabla 4 se comparan varios clientes LDAP, evaluando aspectos clave que pue
 \newgeometry{vmargin=1.4cm,hmargin=0.8cm}
 \begin{landscape}
     \begin{longtable}{|l|p{3cm}|p{2.5cm}|p{6cm}|p{5cm}|p{6cm}|}
-        \caption{Tabla comparativa entre distintos clientes LDAP}
+        \caption{Comparación entre distintos clientes LDAP}
         \label{table:ldap-client-comparison}                                                                                                                                                                                                                                                                                                                                                                                                               \\
         \hline
         \textbf{Cliente LDAP} & \textbf{Dependencia de ldapjs} & \textbf{Soporta TypeScript} & \textbf{Calidad de la documentación}                                                                                                       & \textbf{Comunidad y soporte (en julio 2024)}                                          & \textbf{Facilidad de uso}                                                                                              \\
