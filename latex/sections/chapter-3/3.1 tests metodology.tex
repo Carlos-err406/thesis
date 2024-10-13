@@ -1,0 +1,15 @@
+\subsection{Metodología de pruebas}
+
+Las pruebas en esta solución se llevaron a cabo utilizando las herramientas Vitest y Playwright, recomendadas por defecto en el framework SvelteKit. Estas herramientas proporcionan un entorno robusto para garantizar que el sistema funcione correctamente bajo distintas condiciones, identificando y corrigiendo posibles errores.
+
+La metodología de pruebas utilizada se basa principalmente en el enfoque de \textbf{pruebas de caja negra}, donde se evaluó el comportamiento del sistema sin necesidad de conocer su implementación interna. El objetivo fue garantizar que las entradas proporcionadas generaran las salidas esperadas, según los requisitos funcionales definidos.
+
+Vitest fue la herramienta utilizada para implementar pruebas de \textbf{intrgación} enfocadas en el cliente LDAP, implementado con la librería ldapts. Estas pruebas validaron el comportamiento de las operaciones principales, como la búsqueda, adición, modificación y eliminación de entradas en el AD.
+
+Por otro lado, Playwright se utilizó para realizar pruebas de \textbf{extremo a extremo} (\textit{E2E} por sus siglas en inglés) en los flujos de la interfaz de usuario. Estas pruebas evaluaron la interacción del usuario con la aplicación, simulando acciones como la creación, modificación y eliminación de usuarios. Se verificó que las notificaciones de éxito y error se mostraran correctamente, y que el sistema gestionara las sesiones de usuario de manera eficiente.
+
+\textbf{Tipos de Pruebas}
+
+Pruebas Unitarias: Se centraron en funciones individuales del cliente LDAP para asegurar que las operaciones básicas, como búsquedas y modificaciones, se comporten correctamente en distintos escenarios.
+
+Pruebas E2E: A través de Playwright, se simularon interacciones completas de los usuarios con la interfaz, desde el inicio de sesión hasta la gestión de usuarios, garantizando que la aplicación responda adecuadamente a las solicitudes del usuario final.
