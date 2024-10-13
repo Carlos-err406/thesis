@@ -1,0 +1,31 @@
+\subsubsection{Requisitos funcionales}
+
+Los requisitos funcionales definen las funcionalidades y comportamientos que la aplicación debe ofrecer para cumplir con las necesidades del usuario y los objetivos del proyecto. En la \autoref{table:functional-requirements} a continuación se desglosan los requisitos funcionales del sistema.
+
+
+
+\begin{longtable}{|l|p{5cm}|p{8.5cm}|}
+    \caption{Requisitos funcionales del sistema}
+    \label{table:functional-requirements}                                                                                                                                                                                          \\
+    \hline
+    \textbf{Código} & \textbf{Requisito}                                                              & \textbf{Descripción}                                                                                                       \\
+    \hline
+    \endfirsthead
+    \textbf{RF1}   & Gestión de Usuarios: Creación de usuarios                                       & La aplicación debe permitir la creación de nuevas cuentas de usuario en el AD.                                             \\ \hline
+    \textbf{RF2}   & Gestión de Usuarios: Modificación de usuarios                                   & Los administradores deben poder actualizar la información de los usuarios, como nombres, correos electrónicos, roles, etc. \\ \hline
+    \textbf{RF3}   & Gestión de Usuarios: Eliminación de usuarios                                    & La aplicación debe permitir la eliminación segura de cuentas de usuario.                                                   \\ \hline
+    \textbf{RF4}   & Gestión de Usuarios: Asignación de roles y permisos                             & Debe ser posible asignar y modificar roles y permisos a los usuarios para definir su nivel de acceso a los recursos.       \\ \hline
+    \textbf{RF5}   & Gestión de Grupos: Creación de grupos                                           & Permitir la creación de nuevos grupos en el AD.                                                                            \\ \hline
+    \textbf{RF6}   & Gestión de Grupos: Modificación de grupos                                       & Posibilidad de añadir o remover usuarios de grupos existentes.                                                             \\ \hline
+    \textbf{RF7}   & Gestión de Grupos: Eliminación de grupos                                        & Permitir la eliminación de grupos.                                                                                         \\ \hline
+    \textbf{RF8}   & Gestión de Unidades Organizacionales (OU): Creación de OU                       & La aplicación debe permitir la creación de nuevas Unidades Organizacionales dentro del AD.                                 \\ \hline
+    \textbf{RF9}   & Gestión de Unidades Organizacionales (OU): Modificación de OU                   & Los administradores deben poder renombrar y mover OUs dentro de la jerarquía del directorio.                               \\ \hline
+    \textbf{RF10}  & Gestión de Unidades Organizacionales (OU): Eliminación de OU                    & Debe ser posible eliminar OUse.                                                                                            \\ \hline
+    \textbf{RF11}  & Gestión de Unidades Organizacionales (OU): Asignación de usuarios y grupos a OU & La aplicación debe facilitar la asignación de usuarios y grupos a las OUs para una mejor organización dentro del AD.       \\ \hline
+    \textbf{RF12}  & Autenticación y Autorización: Integración con LDAP                              & La aplicación debe autenticarse a través de LDAP con el AD para validar usuarios y permisos.                               \\ \hline
+    \textbf{RF13}  & Autenticación y Autorización: Gestión de sesiones                               & Manejo de sesiones de usuario con opciones de inicio y cierre de sesión seguro.                                            \\ \hline
+    \textbf{RF14}  & Auditoría y Registro de Actividades: Registro de eventos                        & La aplicación debe registrar todas las operaciones realizadas sobre los usuarios, grupos y OUs, incluyendo quién y cuándo. \\ \hline
+    \textbf{RF15}  & Interfaz de Usuario (UI): Consola de administración                             & Proveer una interfaz amigable y accesible para la gestión de usuarios, grupos, OUs y revisión del registro de eventos.     \\ \hline
+    \textbf{RF16}  & Interfaz de Usuario (UI): Notificaciones                                        & Mostrar notificaciones en la UI para confirmar la ejecución exitosa de acciones o para advertir sobre errores.             \\ \hline
+    \textbf{RF17}  & Configuración de la Aplicación: Facilidad de configuración                      & La aplicación debe ser fácilmente configurable a través de archivos .json o .yaml, validados mediante JSON Schema.         \\ \hline
+\end{longtable}
