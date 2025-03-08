@@ -12,17 +12,6 @@
     "latex-workshop.intellisense.citation.backend": "biblatex",
     "latex-workshop.latex.recipe.default": "first",
     "latex-workshop.latex.recipes": [
-        {
-            "name": "latexmk (lualatex)",
-            "tools": [
-                "lualatexmk"
-            ]
-        },
-        {
-            "name": "latexmk (xelatex)",
-            "tools": [
-                "xelatexmk"
-            ]
-        },
+        {"name": "lualatex", "tools": ["lualatexmk"]}
     ]
 }
