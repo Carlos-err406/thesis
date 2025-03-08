@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage{hyperref} 
+\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{bookmark}
 \usepackage{fontspec}
@@ -77,8 +77,8 @@
 \listoffigures
 
 \newpage % INTRODUCTION
-\pagenumbering{arabic}
 \include{sections/introduction/index}
+\setcounter{section}{0}
 
 \newpage % CHAPTER #1
 \include{sections/chapter-1/index}
@@ -96,7 +96,9 @@
 \include{sections/recommendations}
 
 \newpage % BIBLIOGRAPHY
-\printbibliography
+\phantomsection
+\printbibliography[heading=bibintoc,title={Referencias bibliográficas}]
+\label{sec:bibliography}
 
 \newpage %ACRONYMS AND DICTIONARY
 \include{sections/acronym-dictionary}
