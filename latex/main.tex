@@ -7,7 +7,7 @@
 \usepackage{longtable}
 \usepackage{float}
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
-\usepackage{changepage} % Include this package in your preamble
+\usepackage{changepage}
 
 \setmainfont[Scale=1.12]{Arial}
 \usepackage{pdflscape}
@@ -19,6 +19,7 @@
 
 
 \usepackage[main=spanish,english]{babel}
+\usepackage{csquotes}
 \renewcommand{\figureautorefname}{Figura}
 \renewcommand{\tableautorefname}{Tabla}
 \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
@@ -69,6 +70,7 @@
 \include{sections/abstract/en}
 \newpage
 
+
 %TABLES OF CONTENT
 \tableofcontents
 \renewcommand{\listtablename}{Índice de tablas}
@@ -77,6 +79,7 @@
 \listoffigures
 
 \newpage % INTRODUCTION
+\pagenumbering{arabic}
 \include{sections/introduction/index}
 \setcounter{section}{0}
 

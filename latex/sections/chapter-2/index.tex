@@ -1,8 +1,6 @@
 \section{Capítulo 2 Solución propuesta}
 
-En este capítulo se presentará la solución propuesta para el desarrollo de una aplicación web destinada a la gestión de AD, abordando tanto los aspectos teóricos como técnicos involucrados en su implementación. Se comenzará detallando el modelado del negocio, incluyendo el modelo de dominio y las reglas de negocio definidas mediante patrones, seguido de un análisis de los requisitos funcionales y no funcionales. A continuación, se explicará la arquitectura del sistema, cubriendo el stack tecnológico seleccionado y los principios arquitectónicos adoptados.
-
-Posteriormente, se procederá a describir la selección y modelado de estilos y patrones de diseño, haciendo énfasis en los principios y patrones empleados para asegurar una estructura robusta y flexible. Finalmente, se abordará la implementación de las funciones básicas, proporcionando una vista general de los componentes clave y su integración en la solución final.
+Este capítulo presenta la solución propuesta para la gestión de AD, cubriendo: modelado del negocio, requisitos, arquitectura, patrones de diseño, implementación, despliegue y documentación. El objetivo es desarrollar una aplicación web flexible para la administración de directorios activos, con procesos automatizados de despliegue.
 
 \input{sections/chapter-2/2.1 bussiness model}
 \input{sections/chapter-2/2.2 app requirements.tex}
@@ -11,6 +9,7 @@ Posteriormente, se procederá a describir la selección y modelado de estilos y 
 \input{sections/chapter-2/2.5 design principles.tex}
 \input{sections/chapter-2/2.6 design patterns.tex}
 \input{sections/chapter-2/2.7 implementation.tex}
+\input{sections/chapter-2/2.8 deployment and documentation.tex}
 
 \textbf{Conclusiones parciales}\\
-Este capítulo ha presentado la solución propuesta para la gestión de AD, detallando su modelo de negocio, requisitos, arquitectura y patrones de diseño. El sistema implementa un modelo de dominio claro con reglas de negocio bien definidas, cubriendo todos los aspectos esenciales de la gestión de usuarios, grupos y unidades organizativas. La arquitectura en capas, combinada con patrones como Llamada-Retorno, Cliente-Servidor y n-Capas, asegura una estructura modular y mantenible. Los principios de diseño SOLID y patrones como Observador e Inyección de Dependencias mejoran la calidad del código. La implementación utiliza SvelteKit como framework principal y ldapts para la integración con AD. Los flujos de gestión implementados cubren todas las operaciones CRUD necesarias, garantizando una sincronización adecuada con el AD.
+Este capítulo ha presentado la solución propuesta para la gestión de AD, detallando su modelo de negocio, requisitos, arquitectura y patrones de diseño. El sistema implementa un modelo de dominio claro con reglas de negocio bien definidas, cubriendo todos los aspectos esenciales de la gestión de usuarios, grupos y unidades organizativas. La arquitectura en capas, combinada con patrones como Llamada-Retorno, Cliente-Servidor y n-Capas, asegura una estructura modular y mantenible. Los principios de diseño SOLID y patrones como Observador e Inyección de Dependencias mejoran la calidad del código. La implementación utiliza SvelteKit como framework principal y ldapts para la integración con AD. Los flujos de gestión implementados cubren todas las operaciones CRUD necesarias, garantizando una sincronización adecuada con el AD. El despliegue se automatizó mediante GitLab Pipelines utilizando contenedores Docker, y la documentación técnica se generó automáticamente a partir de los mismos esquemas que se utilizan para validar la configuración, publicándose automáticamente en un sitio web estático que asegura que siempre se encuentre accesible y actualizada.
