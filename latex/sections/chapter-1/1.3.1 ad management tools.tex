@@ -1,24 +1,25 @@
 \subsubsection{Herramientas de gestión de AD}
 
-Para gestionar efectivamente un Directorio Activo (AD), es crucial contar con herramientas que simplifiquen las tareas administrativas y ofrezcan opciones flexibles de personalización y configuración. La capacidad de personalización se refiere a la flexibilidad que ofrece la herramienta para ajustar su interfaz y funcionalidades según las necesidades específicas del usuario u organización \autocite{van_der_hoek_configurable_1999}. Por otro lado, la facilidad de uso está relacionada con la simplicidad con la que una herramienta puede ser operada y configurada, asegurando una experiencia de administración eficiente y sin complicaciones \autocite{sheppard_re-examining_2019}.
+La solución implementada utiliza Samba4 como controlador de dominio de AD, una solución open-source que permite desplegar esta funcionalidad en infraestructura Linux. Samba4 ofrece compatibilidad con los protocolos de Microsoft Active Directory, permitiendo la integración con sistemas Windows mientras se mantiene en un entorno Linux.
+
+Las herramientas de administración incluidas con Samba4 están limitadas a la línea de comandos, lo que las hace menos accesibles en contextos de administración de redes empresariales. Para proveer interfaces más accesibles que permitan administrar Samba DC, se utilizó ADwebmanager\autocite{jerez_vicentgjad-webmanager_2024}, un fork realizado en la CUJAE del proyecto Samba4Manager\autocite{graber_stgrabersamba4-manager_2024}, cuya principal diferencia es la actualización del código fuente a Python3.
+
+Para gestionar efectivamente un AD, es crucial contar con herramientas que simplifiquen las tareas administrativas y ofrezcan opciones flexibles de personalización y configuración. La capacidad de personalización se refiere a la flexibilidad que ofrece la herramienta para ajustar su interfaz y funcionalidades según las necesidades específicas del usuario u organización \autocite{van_der_hoek_configurable_1999}. Por otro lado, la facilidad de uso está relacionada con la simplicidad con la que una herramienta puede ser operada y configurada, asegurando una experiencia de administración eficiente y sin complicaciones \autocite{sheppard_re-examining_2019}.
 
 En la \autoref{table:ad-tech-comparison} se presentan algunas herramientas para la gestión de AD, resaltando sus características principales en términos de personalización y facilidad de uso \autocite{graber_stgrabersamba4-manager_2024,jerez_vicentgjad-webmanager_2024,han_remote_2024,karzynski_webmin_2014}.
 
 \begin{longtable}{|l|p{5cm}|p{5cm}|}
-    \caption{Comparación de tecnologías existentes en cuanto a capacidad de personalización y facilidad de uso
-    }
+    \caption{Comparación de tecnologías existentes en cuanto a capacidad de personalización y facilidad de uso}
     \label{table:ad-tech-comparison}                                                                                                                                                                                                                                                                       \\
     \hline
     \textbf{Herrameinta} & \textbf{Capacidad de personalización (interfaz y apariencia)}                                                                                   & \textbf{Facilidad de uso}                                                                                                     \\
     \hline
     \endfirsthead
     \hline
-    RSAT                 & Limitada, la personalización se limita a ajustes mínimos dentro del entorno de Windows                                                          & Alta, ya que es familiar para administradores de Windows, pero requiere conocimientos previos de AD                           \\
-    \hline
-    Webmin               & Moderada, permite cierta personalización a través de temas y ajustes de interfaz, pero con limitaciones en la profundidad de las modificaciones & Moderada, la interfaz es intuitiva, pero la configuración de módulos puede ser compleja para usuarios sin experiencia técnica \\
-    \hline
     samba4-manager       & Limitada, diseñada específicamente para la gestión de Samba4, con opciones de personalización limitadas                                         & Baja, debido a la complejidad de la configuración y el mantenimiento en entornos no homogéneos                                \\
     \hline
     ADWebmanager         & Limitada, diseñada para funciones comunes de AD, con mínimas opciones de personalización de interfaz                                            & Alta, diseñada para simplificar tareas comunes de gestión de AD, con una curva de aprendizaje reducida                        \\
+    \hline
+    RSAT                 & Limitada, la personalización se limita a ajustes mínimos dentro del entorno de Windows                                                          & Alta, ya que es familiar para administradores de Windows, pero requiere conocimientos previos de AD                           \\
     \hline
 \end{longtable}

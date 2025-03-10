@@ -13,14 +13,14 @@ El Patrón Observador es una técnica de diseño fundamental en el desarrollo de
 
 En el contexto de SvelteKit, el patrón Observador es crucial para la gestión de la reactividad a través de los stores. En la \autoref{fig:loader-store-reaction} se muestra un componente que solo es visible si el valor de la store \textbf{loading} de la \autoref{fig:loader-store-declaration} tiene valor \textbf{true}. Por lo tanto cualquier componente que se modifique el valor de esta store provoca una mutación en el estado del componente de la \autoref{fig:loader-store-reaction}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/code/loader-store-declaration.png}
     \caption{Declaracion de un store en Sveltekit}
     \label{fig:loader-store-declaration}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{images/code/loader-store-reaction.png}
     \caption{Reacción al cambio en la store}
@@ -35,14 +35,14 @@ La \textit{Context API}(API de contexto) de Svelte es una herramienta que facili
 
 En el contexto del sistema, la API de contexto se utiliza para inyectar la configuración de la aplicación relacionada con la página actual (\autoref{fig:context-api-dep-injection}). Esto permite que los componentes accedan a la configuración específica de la página sin necesidad de recibirla a través de props (\autoref{fig:context-api-usage}).
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/code/context-api-dep-injection.png}
     \caption{Uso de la API de Contexto de Sveltekit para inyectar la configuración de la página}
     \label{fig:context-api-dep-injection}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/code/context-api-usage.png}
     \caption{Uso de la API de Contexto de Sveltekit para leer la configuracion de la página}

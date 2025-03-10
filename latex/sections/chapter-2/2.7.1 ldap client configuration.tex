@@ -6,7 +6,7 @@ La configuración del cliente LDAP es crucial para la comunicación efectiva ent
 
 La creación de la instancia del cliente LDAP (\autoref{fig:ldap-client-initialization}) es un proceso modular que permite incorporar opciones de configuración personalizadas. La función \textbf{getLDAPClient} , la toma las opciones por defecto de la configuración del sistema, definida en el objeto \textbf{config}, y permite la sobrescritura de parámetros mediante el uso de la función \textbf{deepmerge}. De este modo, se asegura flexibilidad en la configuración sin comprometer las configuraciones base.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/code/ldap-client-initialization.png}
     \caption{Creación del cliente LDAP con ldapts}

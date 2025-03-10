@@ -11,13 +11,7 @@ A partir de este objetivo general, se derivan los siguientes objetivos específi
 
     \item Seleccionar tecnologías adecuadas:
           \begin{enumerate}[label=\arabic{enumi}.\arabic*., leftmargin=*]
-              \item Evaluar diferentes clientes LDAP disponibles en el mercado, considerando factores como compatibilidad, rendimiento y facilidad de integración.
-              \item Elegir el cliente LDAP que mejor se alinee con los requisitos funcionales y no funcionales previamente definidos.
-          \end{enumerate}
-
-    \item Seleccionar tecnologías adecuadas:
-          \begin{enumerate}[label=\arabic{enumi}.\arabic*., leftmargin=*]
-              \item Evaluar diferentes clientes LDAP disponibles en el mercado, considerando factores como compatibilidad, rendimiento y facilidad de integración.
+              \item Evaluar diferentes clientes LDAP disponibles, considerando factores como compatibilidad, rendimiento y facilidad de integración.
               \item Elegir el cliente LDAP que mejor se alinee con los requisitos funcionales y no funcionales previamente definidos.
           \end{enumerate}
 
@@ -33,28 +27,18 @@ A partir de este objetivo general, se derivan los siguientes objetivos específi
           \begin{enumerate}[label=\arabic{enumi}.\arabic*., leftmargin=*]
               \item Diseñar y ejecutar pruebas de integración que verifiquen el correcto funcionamiento del sistema en su conjunto, desde la autenticación hasta la gestión de recursos.
               \item Documentar los resultados de las pruebas y realizar los ajustes necesarios basados en los hallazgos.
-              \item Extender el conjunto de pruebas de integración para abarcar nuevas funcionalidades y garantizar la estabilidad y compatibilidad del sistema ante cambios y actualizaciones futuras.
           \end{enumerate}
 
-    \item Simplificar y documentar el proceso de despliegue:
+    \item Generar documentación técnica:
           \begin{enumerate}[label=\arabic{enumi}.\arabic*., leftmargin=*]
-              \item Identificar estrategias y herramientas que simplifiquen el proceso de instalación y configuración inicial de la aplicación.
-              \item Utilizar contenedores Docker para simplificar el proceso de puesta en marcha de la aplicación.
-              \item Elaborar documentación detallada del proceso de despliegue.
+              \item Automatizar generación de documentación técnica utilizando los esquemas JSON existentes para describir la estructura y validación de los archivos de configuración.
+              \item Integrar el proceso de generación de documentación en un pipeline de CI/CD, asegurando la actualización automática con cada cambio en los esquemas.
+              \item Publicar la documentación como un sitio web estático accesible públicamente, proporcionando una referencia técnica completa y actualizada.
           \end{enumerate}
 
-    \item Desplegar documentación:
+    \item Desplegar aplicación:
           \begin{enumerate}[label=\arabic{enumi}.\arabic*., leftmargin=*]
-              \item Crear y estructurar la documentación técnica que incluya la descripción del sistema, la arquitectura, y las guías de desarrollo.
-              \item Documentar referencias de API y/o archivos de configuracion que sean claras y accesibles.
-              \item Publicar la documentación en un sitio web accesible.
-          \end{enumerate}
-
-    \item Desplegar demo:
-          \begin{enumerate}[label=\arabic{enumi}.\arabic*., leftmargin=*]
-              \item Configurar el servidor donde se va a desplegar.
-              \item Configurar Docker para simplificar el despliegue.
-              \item Configurar CI/CD para despliegues automáticos.
-              \item Ejecutar el primer despliegue exitoso.
+              \item Configurar entornos de desarrollo, pruebas y producción utilizando Docker, garantizando consistencia entre diferentes entornos.
+              \item Implementar un pipeline de CI/CD que automatice la construcción, pruebas y despliegue de la aplicación.
           \end{enumerate}
 \end{enumerate}

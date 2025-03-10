@@ -6,7 +6,7 @@ El Principio de Responsabilidad Única (SRP, por sus siglas en inglés) es uno d
 
 En el sistema se tienen varios módulos que funcionan de manera independiente y tienen un único propósito, en la \autoref{fig:bussiness-logic-modules} se muestran algunos de estos módulos cuyas responsabilidades son la autenticación, la gestión de grupos, la gestion de unidades organizacionales, el manejo de las operaciones directas sobre el árbol del directorio, y la gestión de usuarios respectivamente (\autoref{fig:collapsed-view-of-user-module}).
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{images/code/bussiness-logic-modules.png}
     \caption{Módulos de la capa de logica de negocio}
@@ -29,7 +29,7 @@ En lugar de modificar directamente el comportamiento de un componente, se sugier
 
 Este principio se aplica en la manera en que los componentes de Svelte están diseñados para ser reutilizables y componibles. Un ejemplo claro se presenta en la \autoref{fig:open-closed-slots}, muestra cómo un mismo componente Input en Svelte puede adaptarse a través del uso de diferentes propiedades (props) y ranuras (slots), permitiendo su reutilización en distintos contextos sin necesidad de modificar su implementación base.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/code/open-closed-slots.png}
     \caption{Instancias del componente Input ilustrando el pincipio Abierto-Cerrado mediante la composición de componentes}

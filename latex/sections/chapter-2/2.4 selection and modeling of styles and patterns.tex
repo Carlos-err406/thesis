@@ -30,7 +30,7 @@ Para la gestión de los datos en el sistema, se implementa el Patrón de Acceso 
 
 En la \autoref{fig:using-ldap-client-to-search-in-directory} muestra la declaración de la función \textbf{getDirectChildren} mencionada anteriormente, donde se utiliza el cliente ldap (de la librería ldapts) para realizar una búsqueda en el directorio. El uso del cliente ldap abstrae la interacción con el directorio además de centralizar el acceso.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/code/getDirectChildren.png}
     \caption{Uso del cliente ldap para realizar una búsqueda en el directorio}
@@ -40,7 +40,7 @@ En la \autoref{fig:using-ldap-client-to-search-in-directory} muestra la declarac
 \textbf{Patrón n-capas}
 La arquitectura del sistema está organizada en un patrón de n-capas (\autoref{fig:n-layer-system-structure}), con una capa de presentación que interactúa con la capa de lógica de negocio, la cual a su vez se comunica con la capa de acceso a datos. Este enfoque modulariza las responsabilidades y mejora la escalabilidad y mantenibilidad del sistema.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/app-folder-structure.png}
     \caption{Estructura simplificada del sistema mostrando n-capas}

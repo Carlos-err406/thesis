@@ -4,9 +4,6 @@
     "latex-workshop.intellisense.includegraphics.preview.enabled": true,
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
     "latex-workshop.latex.clean.subfolder.enabled": true,
-    "latex-workshop.message.latexlog.exclude": [
-        "Underfull \\hbox (badness 1286)"
-    ],
     "latex-workshop.latex.build.forceRecipeUsage": true,
     "latex-workshop.check.duplicatedLabels.enabled": true,
     "latex-workshop.intellisense.citation.backend": "biblatex",

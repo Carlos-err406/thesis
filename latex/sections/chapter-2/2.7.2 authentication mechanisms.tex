@@ -16,7 +16,7 @@ El proceso de autenticación se basa en la operación \textbf{bind} proporcionad
     \item \textbf{Redirección del usuario}: Una vez completado el proceso de inicio de sesión, el sistema redirige al usuario a su página de perfil.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{images/puml/flow-diagram-signin/flow-diagram-signin.png}
     \caption{Diagrama de flujo: Función de autenticación}
@@ -27,7 +27,7 @@ El proceso de autenticación se basa en la operación \textbf{bind} proporcionad
 
 Este proceso se gestiona en el módulo de autenticación, método signOut, que elimina las cookies de sesión y acceso, invalidando así la sesión del usuario. Este mecanismo asegura que, tras cerrar la sesión, el usuario ya no podrá acceder a la aplicación hasta que vuelva a autenticarse correctamente (\autoref{fig:flow-diagram-signout-method}).
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{images/puml/flow-diagram-signout/flow-diagram signout.png}
     \caption{Diagrama de flujo: Función cerrar sesión}

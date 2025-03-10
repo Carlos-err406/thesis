@@ -2,7 +2,7 @@
 
 Los archivos de configuración desempeñan un papel fundamental en el desarrollo y la operación de sistemas informáticos modernos al proporcionar una forma estructurada de definir variables y ajustes clave que modifican y parametrizan el comportamiento de los sistemas. Además, facilitan la modificación del sistema sin necesidad de acceder y modificar directamente el código fuente, lo que promueve la flexibilidad y la mantenibilidad.
 
-Este epígrafe explora diversas técnicas y formatos utilizados para la configuración de aplicaciones, destacando su importancia en la gestión eficiente de la infraestructura y la personalización de comportamientos. Se analiza el uso de archivos de variables de entorno (.env) \autocite{pandey_guide_2022}, así como de JSON \autocite{erickson_what_2024,bray_javascript_2014} y YAML \autocite{ben-kiki_yaml_2021,redhat_what_2023} en combinación con JSON Schema \autocite{attouche_witness_2022,json_schema_json_2024} para la validación y estructuración de configuraciones. Aunque existen otros formatos como TOML [20], estos no tienen soporte para JSON Schema, lo cual carece de la capa adicional de seguridad y estructuración que es fundamental en muchos entornos de desarrollo. Este epígrafe proporciona una visión comprehensiva para comprender cómo estos archivos facilitan la configuración flexible y robusta
+Este epígrafe explora diversas técnicas y formatos utilizados para la configuración de aplicaciones, destacando su importancia en la gestión eficiente de la infraestructura y la personalización de comportamientos. Se analiza el uso de archivos de variables de entorno (.env) \autocite{pandey_guide_2022}, así como de JSON \autocite{erickson_what_2024,bray_javascript_2014} y YAML \autocite{ben-kiki_yaml_2021,redhat_what_2023} en combinación con JSON Schema \autocite{attouche_witness_2022,json_schema_json_2024} para la validación y estructuración de configuraciones. Aunque existen otros formatos como TOML [20], estos no tienen soporte para JSON Schema, lo cual carece de la capa adicional de seguridad y estructuración que es fundamental en muchos entornos de desarrollo. Este epígrafe proporciona una visión comprehensiva para comprender cómo estos archivos facilitan la configuración flexible y robusta.
 
 \textbf{JSON Schema}
 
@@ -12,7 +12,7 @@ El uso de JSON Schema mejora la seguridad y la robustez de los sistemas al valid
 
 En la \autoref{fig:json-schema} se muestra un ejemplo de JSON Schema donde se definen 4 propiedades simples de disintos tipos y distintas restricciones. Por ejemplo prop1 se define como una cadena de caracteres, prop2 como un entero con valor máximo 100 y valor mínimo 0, prop3 un booleano, y prop4 como un arreglo que debe tener elementos únicos y un máximo de 3 elementos. A cada una de estas propiedades se les puede proveer de una descripción lo cual ayuda en la comprensión del propósito de la propiedad.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/json-schema.png}
     \caption{2 Ejemplo de esquema JSON con varias propiedades de distintos tipos}
@@ -25,7 +25,7 @@ Los archivos JSON son ampliamente utilizados para la configuración de aplicacio
 
 En la \autoref{fig:json+jsonschema} se muestra un ejemplo de archivo JSON aplicando el esquema definido en la \autoref{fig:json-schema}. Se puede ver como establecer el esquema dota al archivo JSON de autocompletado en las propiedades, además de validaciones según las restricciones del esquema.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{images/json+jsonschema .png}
     \caption{Ejemplo de archivo JSON aplicando el esquema}
@@ -49,7 +49,7 @@ En la \autoref{fig:yaml+jsonschema} se muestra un ejemplo de archivo YAML aplica
 
 Las variables de entorno son una técnica comúnmente utilizada para configurar aplicaciones. Estos archivos, generalmente con la extensión .env, permiten definir variables clave en un formato sencillo de clave-valor (\autoref{fig:env}), facilitando la gestión de configuraciones sensibles y específicas del entorno, como credenciales de acceso, URLs de servicios externos, y configuraciones de depuración \autocite{pandey_guide_2022}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics{images/env.png}
     \caption{Ejemplo de archivo .env}

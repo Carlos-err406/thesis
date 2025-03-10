@@ -1,13 +1,15 @@
 \begin{otherlanguage}{english}
 
     \begin{abstract}
-        This thesis presents an open-source web application for user management and authentication based on Active Directory through LDAP. The solution addresses limitations of its predecessors by offering a centralized administration console that is both highly configurable and adaptable to organizational needs. The development followed a systematic approach, including requirements analysis, technology selection, and implementation of core functionalities.
+        This thesis develops an open-source web application for Active Directory management through LDAP with Samba4 as domain controller, addressing limitations in existing solutions like ADWebmanager. The research establishes a theoretical foundation for centralized user management and directory services, analyzing current tools and technologies. The proposed solution implements a complete domain model with layered architecture, using SvelteKit and ldapts for AD integration.
 
-        Key aspects include robust LDAP client integration, responsive user interface, and user management flows. The application demonstrates significant advantages in terms of flexibility and ease of use compared to its predecessors. Testing results confirm the viability of the approach, with successful implementation of critical features.
+        The application provides robust LDAP client functionality, responsive user interface, and comprehensive user management flows. Key features include automated deployment through CI/CD and Docker containers, along with automatically generated technical documentation. Testing methodologies included unit and integration tests with Vitest, and E2E tests with Playwright, validating all critical operations.
 
-        This work contributes to the field of user and directory management by establishing a framework for future research and development. The proposed solution positions itself as a valuable alternative for organizations seeking to enhance their identity management in an evolving digital landscape.
+        Results demonstrate successful implementation of core functionalities, including resource creation, modification, and deletion. The solution offers significant improvements in flexibility, security, and ease of use compared to existing tools. This work contributes to the field of user and directory management by establishing a framework for future research and development.
+
+        The thesis concludes that the proposed solution provides a valuable alternative for organizations seeking to enhance their identity management systems, particularly in environments requiring high levels of customization and security.
         \vfill
-        \textbf{Keywords}: user management, open source, Active Directory, LDAP, authentication, customization, web application.
+        \textbf{Keywords}: user management, open source, Active Directory, LDAP, SvelteKit, automated deployment, testing.
     \end{abstract}
     
 \end{otherlanguage}
