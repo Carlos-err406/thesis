@@ -3,6 +3,8 @@ bib - *.pdf
 
 latex/bibliography/files/
 yuley-firm.png
+digital-firm-carlosdanielvilaseca.png
+
 *.aux
 *.toc
 *.gz
