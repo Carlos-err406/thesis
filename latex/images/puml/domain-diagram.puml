@@ -38,7 +38,7 @@ object Administrador {
 }
 
 object GrupoDeAdministradores {
-    zona de administración
+    permisos de administración
 }
 
 object UnidadesOrganizacionales {

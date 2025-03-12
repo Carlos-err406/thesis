@@ -2,13 +2,13 @@
 
 La gestión de usuarios y la autenticación en entornos de red son procesos esenciales en cualquier organización \autocite{thakur_user_2015-1, josang_local_2015, kizza_access_2024}. Los directorios activos desempeñan un papel clave al centralizar y asegurar el control de accesos a los diferentes servicios y recursos empresariales \autocite{kizza_access_2024}. Actualmente, estas herramientas son ampliamente utilizadas en empresas de diversos tamaños para gestionar usuarios, grupos y unidades organizativas de manera unificada (\autoref{fig:companies-using-ad}).
 
-Un Directorio Activo (AD por sus siglas en inglés) es una base de datos jerárquica utilizada para almacenar y gestionar información sobre los recursos de la red, como usuarios, dispositivos y servicios. Proporciona una estructura centralizada que permite a los administradores controlar permisos y acceso a los recursos de manera segura y eficiente  \autocite{harrison_lightweight_2006,thakur_user_2015,carter_ldap_2003}. 
+Un Directorio Activo (AD por sus siglas en inglés) es una base de datos jerárquica utilizada para almacenar y gestionar información sobre los recursos de la red, como usuarios, dispositivos y servicios. Proporciona una estructura centralizada que permite a los administradores controlar permisos y acceso a los recursos de manera segura y eficiente  \autocite{allen_active_2003,thakur_user_2015,carter_ldap_2003,francis_mastering_2021,smirnov_building_2024}.
 
 En este contexto, el protocolo LDAP (Lightweight Directory Access Protocol) se utiliza para interactuar con los directorios activos, facilitando la búsqueda, consulta y modificación de la información almacenada en ellos \autocite{harrison_lightweight_2006,sermersheim_lightweight_2006,bartlett_samba_2005,voglmaier_abcs_2003,redhat_what_2022,janice_ldap_2023}.
 
-Existen dos grandes grupos de directorios activos en el mercado: los de pago y los de código abierto. Las soluciones comerciales, como las ofrecidas por Microsoft, destacan por su facilidad de uso y alto nivel de integración, pero también generan una dependencia tecnológica significativa y pueden no ser viables para organizaciones con presupuestos limitados. En contraste, los directorios activos de código abierto que eliminan la necesidad de costosas licencias y ofrecen independencia tecnológica \autocite{thakur_user_2015-1,bartlett_samba_2005,imanudin_active_2019}.
+Existen dos grandes grupos de directorios activos en el mercado: los de pago y los de código abierto. Las soluciones comerciales, como las ofrecidas por Microsoft, destacan por su facilidad de uso y alto nivel de integración, pero también generan una dependencia tecnológica significativa y pueden no ser viables para organizaciones con presupuestos limitados. En contraste, los directorios activos de código abierto que eliminan la necesidad de costosas licencias y ofrecen independencia tecnológica \autocite{thakur_user_2015-1,bartlett_samba_2005,imanudin_active_2019,boulanger_open-source_2005,bonaccorsi_why_2003}.
 
-Entre las soluciones libres, Samba4 emerge como una solución open-source que permite implementar un controlador de dominio de AD en infraestructura Linux, ofreciendo compatibilidad con los protocolos de Microsoft AD. 
+Entre las soluciones libres, Samba4 emerge como una solución open-source que permite implementar un controlador de dominio de AD en infraestructura Linux, ofreciendo compatibilidad con los protocolos de Microsoft AD \autocite{samba_what_2019,bartlett_samba_2005,carter_using_2007,imanudin_active_2019}.
 
 Un ejemplo práctico de adopción de Samba4 se encuentra en la empresa Avangenio. Sin embargo, las herramientas de administración incluidas con Samba4 están limitadas a la línea de comandos, lo que las hace menos accesibles en contextos de administración de redes empresariales \autocite{bartlett_samba_2005,imanudin_active_2019,samba_what_2019}.
 
@@ -22,13 +22,13 @@ Para superar esta limitación, se desarrollaron soluciones web como ADwebmanager
     \item Inconsistencias en la interfaz de usuario que afectan la experiencia de usuario.
 \end{itemize}
 
-Estas limitaciones llevan a identificar como problema a resolver: las deficiencias de ADWebmanager en términos de seguridad y experiencia de usuario dificultan la gestión eficiente de los recursos empresariales.
+Estas limitaciones llevan a identificar como \textbf{problema a resolver}: las deficiencias de ADWebmanager en términos de seguridad y experiencia de usuario dificultan la gestión eficiente de los recursos empresariales.
 
-Para solucionar este problema se tiene como objeto de estudio los las herramientas de administración de AD. El campo de acción se delimita a los sistemas web de SLCA para la gestión de AD, con especial atención a las soluciones web para Samba4.
+Para solucionar este problema se tiene como \textbf{objeto de estudio} las herramientas de administración de AD. El \textbf{campo de acción} se delimita a los sistemas web de SLCA para la gestión de AD, con especial atención a las soluciones web para Samba4.
 
-Como hipótesis se plantea que desarrollar una herramienta web de código abierto para la gestión de AD basada en Samba4 que ofrezca un mayor nivel de personalización a través de archivos de configuración permitirá mejorar la adaptabilidad y facilidad de uso, sin comprometer la seguridad y estabilidad, en comparación con ADWebmanager.
+Como \textbf{hipótesis} se plantea que desarrollar una herramienta web de código abierto para la gestión de AD basada en Samba4 que ofrezca un mayor nivel de personalización a través de archivos de configuración permitirá mejorar la adaptabilidad y facilidad de uso, sin comprometer la seguridad y estabilidad, en comparación con ADWebmanager.
 
-Para demostrar esta hipótesis se plantea como objetivo general crear una consola de administración de código abierto para AD que demuestre una mejora en la personalización y facilidad de uso en comparación con las herramientas de gestión existentes.
+El \textbf{objetivo general} de este trabajo es desarrollar una consola web de administración de AD, de código abierto y basada en Samba4, que supere las limitaciones de ADWebmanager en dos aspectos clave: seguridad, implementando mecanismos robustos de autenticación; usabilidad, mediante una interfaz responsiva e intuitiva.
 
 \input{sections/introduction/objectives-and-tasks}
 

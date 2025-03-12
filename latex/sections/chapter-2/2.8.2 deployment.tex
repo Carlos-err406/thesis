@@ -1,11 +1,15 @@
 \subsubsection{Despliegue}
 El proceso de despliegue de la aplicación fue diseñado para ser simple y reproducible. Se configuraron los entornos de producción, aseguramiento de la calidad y desarrollo, utilizando Docker para empaquetar la aplicación junto con todas sus dependencias, garantizando consistencia entre diferentes entornos.
 
-Se implementó un pipeline de CI/CD utilizando GitLab Pipelines que automatiza el proceso de construcción, pruebas y despliegue. Este pipeline incluye etapas para:
+Se implementó un pipeline de CI/CD que automatiza el proceso de construcción, pruebas y despliegue. Este sistema incluye:
+
 \begin{itemize}
-    \item Ejecución de pruebas unitarias y de integración
-    \item Construcción de imágenes Docker
-    \item Despliegue en el entorno de producción
+    \item Integración continua para la construcción y verificación automática del código con cada cambio.
+    \item Configuración de diferentes entornos (desarrollo, pruebas y producción) con características específicas para cada caso.
+    \item Uso de contenedores para empaquetar la aplicación y sus dependencias, asegurando consistencia entre entornos.
+    \item Procesos automatizados de limpieza y mantenimiento de recursos durante los despliegues.
+    \item Integración de SonarQube para el análisis estático de código, permitiendo la identificación temprana de problemas de calidad, seguridad y mantenibilidad del software.
+    \item Estrategias de despliegue continuo que permiten actualizaciones frecuentes con mínimo impacto en la disponibilidad del sistema.
 \end{itemize}
 
-Se adoptaron estrategias de despliegue continuo que permiten actualizaciones frecuentes con mínimo tiempo de inactividad, asegurando la disponibilidad del sistema mientras se implementan nuevas características y correcciones.
+Este enfoque garantiza la calidad del software mientras se implementan nuevas características y correcciones de manera eficiente.

@@ -1,6 +1,6 @@
 \subsubsection{Flujos de gestión}
 
-Los flujos de gestión definen el ciclo de vida de los objetos del Directorio en la aplicación, asegurando que las operaciones realizadas por los administradores se sincronicen correctamente con el AD. Estas operaciones incluyen la creación, lectura, actualización y eliminación de objetos.
+Los flujos de gestión definen el ciclo de vida de los objetos del AD en la aplicación, asegurando que las operaciones realizadas por los administradores se sincronicen correctamente con el AD. Estas operaciones incluyen la creación, lectura, actualización y eliminación de objetos.
 
 \textbf{Creación de objetos}
 
@@ -12,6 +12,11 @@ Cuando un nuevo objeto, como un usuario o grupo, es creado desde la aplicación,
     \caption{Uso de la operacion \textit{add} con el cliente LDAP}
     \label{fig:ldap-add-operation}
 \end{figure}
+
+
+\textbf{Eliminación de objetos}
+
+Finalmente, la eliminación de objetos se maneja mediante una operación delete. Los administradores pueden eliminar usuarios, grupos o unidades organizativas, y el cambio se refleja de inmediato en el AD. Antes de la eliminación, se realizan verificaciones adicionales para evitar la pérdida de información importante o la eliminación accidental de objetos clave. En la \autoref{fig:activity-diagram-delete-ou} se muestra el diagrama de actividades para el proceso de eliminar una Unidad Organizacional.
 
 \textbf{Lectura de objetos}
 
@@ -28,6 +33,3 @@ La lectura de objetos permite a los administradores consultar los detalles de lo
 
 La actualización de objetos en el AD se gestiona a través de operaciones \textbf{modify} o \textbf{replace}. La aplicación permite a los administradores modificar los atributos de los objetos, como los datos personales de un usuario o la membresía de un grupo. Una vez validados los cambios, estos se aplican directamente al AD, asegurando que la información sea precisa y esté actualizada. En la \autoref{fig:flow-diagram-update-group} se detalla el flujo de actualización de un grupo.
 
-\textbf{Eliminación de objetos}
-
-Finalmente, la eliminación de objetos se maneja mediante una operación delete. Los administradores pueden eliminar usuarios, grupos o unidades organizativas, y el cambio se refleja de inmediato en el AD. Antes de la eliminación, se realizan verificaciones adicionales para evitar la pérdida de información importante o la eliminación accidental de objetos clave. En la \autoref{fig:activity-diagram-delete-ou} se muestra el diagrama de actividades para el proceso de eliminar una Unidad Organizacional.

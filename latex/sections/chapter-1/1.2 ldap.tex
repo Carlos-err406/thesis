@@ -1,16 +1,16 @@
 \subsection{Protocolo Ligero de Acceso a Directorios (LDAP)}
 
-LDAP es un estándar de protocolo utilizado para acceder y gestionar información almacenada en directorios de manera eficiente y segura. En el contexto de la administración de sistemas informáticos, LDAP desempeña un papel fundamental al facilitar la búsqueda, autenticación y gestión de usuarios, dispositivos y otros recursos \autocite{sermersheim_lightweight_2006,carter_ldap_2003}.
+LDAP es un estándar de protocolo utilizado para acceder y gestionar información almacenada en directorios de manera eficiente y segura. En el contexto de la administración de sistemas informáticos, LDAP desempeña un papel fundamental al facilitar la búsqueda, autenticación y gestión de usuarios, dispositivos y otros recursos \autocite{sermersheim_lightweight_2006,carter_ldap_2003,howes_ldap_1997}.
 
 Este epígrafe explora los principios fundamentales de LDAP, incluyendo su arquitectura, funcionamiento y principales características. Se examinará cómo LDAP permite la estructuración jerárquica de la información mediante la utilización de entradas y atributos, lo cual facilita la organización y el acceso a datos.
 
 \textbf{Arquitectura de LDAP}
 
-LDAP se basa en una arquitectura cliente-servidor, donde el cliente LDAP envía solicitudes al servidor LDAP para realizar diversas operaciones, como búsquedas, actualizaciones y autenticaciones de información almacenada en el directorio. Esta arquitectura facilita la gestión centralizada y eficiente de los datos \autocite{harrison_lightweight_2006,sermersheim_lightweight_2006,carter_ldap_2003}.
+LDAP se basa en una arquitectura cliente-servidor \autocite{voglmaier_abcs_2003}, donde el cliente LDAP envía solicitudes al servidor LDAP para realizar diversas operaciones, como búsquedas, actualizaciones y autenticaciones de información almacenada en el directorio. Esta arquitectura facilita la gestión centralizada y eficiente de los datos \autocite{harrison_lightweight_2006,sermersheim_lightweight_2006,carter_ldap_2003}.
 
 \begin{itemize}
-    \item \textbf{Cliente LDAP}: Es el software que realiza peticiones de búsqueda, modificación o consulta de información almacenada en el servidor LDAP.
-    \item \textbf{Servidor LDAP}: Es el software que almacena la base de datos de directorio y responde a las peticiones de los clientes LDAP. El servidor LDAP gestiona y organiza la información en forma de entradas almacenadas en un árbol de directorio.
+    \item \textbf{Cliente LDAP}: es el software que realiza peticiones de búsqueda, modificación o consulta de información almacenada en el servidor LDAP.
+    \item \textbf{Servidor LDAP}: es el software que almacena la base de datos de directorio y responde a las peticiones de los clientes LDAP. El servidor LDAP gestiona y organiza la información en forma de entradas almacenadas en un árbol de directorio.
     \item \textbf{Protocolo de Comunicación}: LDAP define cómo se comunican el cliente y el servidor a través de un protocolo eficiente y ligero, diseñado principalmente para la lectura, búsqueda y modificación de información en directorios.
     \item \textbf{Eficiencia}: permite búsquedas rápidas y eficientes de información en grandes volúmenes de datos.
     \item \textbf{Seguridad}: soporta protocolos de seguridad como TLS (Transport Layer Security) para proteger la integridad y confidencialidad de los datos transmitidos.
@@ -23,4 +23,4 @@ LDAP se basa en una arquitectura cliente-servidor, donde el cliente LDAP envía 
 
 LDAP se utiliza ampliamente en la autenticación de usuarios, control de acceso y gestión de identidades en sistemas operativos, aplicaciones web y servicios de correo electrónico. Su flexibilidad y robustez lo convierten en una herramienta fundamental para la integración y administración de infraestructuras de TI empresariales \autocite{sermersheim_lightweight_2006,redhat_what_2022,carter_ldap_2003}.
 
-
+Entre los sistemas que implementan integración con LDAP para autenticación se encuentran sistemas ERP \autocite{noauthor_setting_nodate}, Gitlab \autocite{noauthor_integrate_nodate}, Redmine \autocite{noauthor_redmineldap_nodate}, Nextcloud \autocite{noauthor_user_nodate} y muchos otros. Esta integración permite la gestión centralizada de usuarios y el control de acceso unificado a través de múltiples aplicaciones y servicios.

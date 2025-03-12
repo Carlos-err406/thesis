@@ -8,10 +8,7 @@ if (Captcha valid?) then (Yes)
     :LDAP bind with user credentials;
     if (Bind successful?) then (Yes)
         :Get user from Active Directory;
-        :Generate session token;
-        :Generate access token;
-        :Set session cookie;
-        :Set access cookie;
+        :Generate session and access tokens;
         :Log sign-in event;
         :Redirect to users profile;
     else (No)

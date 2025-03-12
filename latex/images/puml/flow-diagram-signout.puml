@@ -2,8 +2,7 @@
 start
 :Check if user is authenticated;
 if (User is authenticated?) then (Yes)
-    :Delete session cookie;
-    :Delete access cookie;
+    :Delete cookies;
 else (No)
 endif
     :Log sign-out event;

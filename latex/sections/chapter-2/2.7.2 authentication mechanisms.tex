@@ -10,7 +10,7 @@ Como se explicó en secciones anteriores, los manejadores (handlers) authenticat
 
 El proceso de autenticación se basa en la operación \textbf{bind} proporcionada por el cliente LDAP. Este proceso se gestiona en el módulo de autenticación, método \textbf{signIn}, encargado de validar las credenciales del usuario y establecer las cookies de sesión. En la \autoref{fig:flow-diagram-auth-method} se muestra el diagrama de flujo detallando los pasos seguidos por el método:
 \begin{enumerate}
-    \item \textbf{Validación del formulario y captcha}: El sistema recibe los datos del formulario de inicio de sesión y valida tanto las credenciales del usuario como el token de captcha para prevenir intentos de acceso automatizados.
+    \item \textbf{Validación del formulario y captcha}: El sistema recibe los datos del formulario de inicio de sesión y valida tanto las credenciales del usuario como el token de captcha para prevenir intentos de acceso automatizados y ataques de fuerza bruta.
     \item \textbf{Autenticación en el AD}: Una vez que el captcha y las credenciales del usuario se validan correctamente, el sistema intenta autenticar al usuario en el AD a través del cliente LDAP. Si la autenticación falla, se maneja de acuerdo con los diferentes códigos de error que proporciona el AD, permitiendo mensajes de error detallados como "Credenciales inválidas", "Cuenta deshabilitada", o "Contraseña expirada".
     \item \textbf{Generación de tokens y cookies}: Si la autenticación es exitosa, el sistema recupera la entrada del usuario en el AD y genera los tokens de sesión y acceso. Estos tokens se almacenan en cookies para futuras solicitudes.
     \item \textbf{Redirección del usuario}: Una vez completado el proceso de inicio de sesión, el sistema redirige al usuario a su página de perfil.
@@ -18,7 +18,7 @@ El proceso de autenticación se basa en la operación \textbf{bind} proporcionad
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{images/puml/flow-diagram-signin/flow-diagram-signin.png}
+    \includegraphics[scale=0.5]{images/puml/flow-diagram-signin/flow-diagram signin.png}
     \caption{Diagrama de flujo: Función de autenticación}
     \label{fig:flow-diagram-auth-method}
 \end{figure}
