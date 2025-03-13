@@ -1,23 +1,23 @@
 \subsubsection{Requisitos no funcionales}
 
-Los requisitos no funcionales describen las cualidades que debe tener la aplicación para garantizar un desempeño óptimo y satisfacer las expectativas de los usuarios. En la \autoref{table:non-functional-requirements} se enumeran los requisitos funcionales que debe presentar el sistema.
+Los requisitos no funcionales describen las cualidades que debe tener la aplicación para garantizar un desempeño óptimo y satisfacer las expectativas de los usuarios. En la \autoref{table:non-functional-requirements} se enumeran los requisitos funcionales que debe presentar el sistema categorizados según la ISO/IEC 25010.
 
 
-\begin{longtable}{|l|l|p{12cm}|}
+\begin{longtable}{|l|p{4cm}|p{10cm}|}
     \caption{Requisitos no funcionales del sistema}
-    \label{table:non-functional-requirements}                                                                                                                                                 \\
+    \label{table:non-functional-requirements}                                                                                                                                                                                            \\
     \hline
-    \textbf{Código} & \textbf{Requisito} & \textbf{Descripción}                                                                                                                               \\
+    \textbf{Código} & \textbf{Clasificación}                                        & \textbf{Requisito}                                                                                                                                 \\
     \hline
     \endfirsthead
-    \textbf{RNF1}   & Calidad            & La aplicación debe ser capaz de manejar un creciente número de usuarios y grupos sin degradación significativa en el rendimiento.                  \\ \hline
-    \textbf{RNF2}   & Restricción        & La aplicación debe implementar mecanismos de seguridad como cifrado de datos, autenticación segura, y control de acceso basado en roles (RBAC).    \\ \hline
-    \textbf{RNF3}   & Calidad            & Las operaciones críticas como la autenticación y la gestión de usuarios deben completarse en menos de 2 segundos en condiciones normales de carga. \\ \hline
-    \textbf{RNF4}   & Calidad            & La interfaz debe ser intuitiva y fácil de usar, con una curva de aprendizaje mínima para administradores y usuarios avanzados.                     \\ \hline
-    \textbf{RNF5}   & Restricción        & La aplicación debe ser compatible con múltiples navegadores web modernos y adaptarse a diferentes tamaños de pantalla (responsive design).         \\ \hline
-    \textbf{RNF6}   & Calidad            & El código debe ser modular y bien documentado, facilitando futuras actualizaciones y correcciones de errores.                                      \\ \hline
-    \textbf{RNF7}   & Calidad            & La configuración de la aplicación debe estar documentada de manera clara y accesible, disponible en línea en el sitio web del proyecto.            \\ \hline
-    \textbf{RNF8}   & Restricción        & La aplicación debe ser web.                                                                                                                        \\ \hline
-    \textbf{RNF9}   & Restricción        & La aplicacion debe ser de código abierto.                                                                                                          \\ \hline
-    \textbf{RNF10}  & Restricción        & El sistema debe integrarse con Samba4 versión 4.16 y superiores.                                                                     \\ \hline
+    \textbf{RNF1}   & Eficiencia de rendimiento (escalabilidad)                     & La aplicación debe ser capaz de manejar un creciente número de usuarios y grupos sin degradación significativa en el rendimiento.                  \\ \hline
+    \textbf{RNF2}   & Seguridad                                                     & La aplicación debe implementar mecanismos de seguridad como cifrado de datos, autenticación segura, y control de acceso basado en roles (RBAC).    \\ \hline
+    \textbf{RNF3}   & Eficiencia de rendimiento (comportamiento temporal)           & Las operaciones críticas como la autenticación y la gestión de usuarios deben completarse en menos de 2 segundos en condiciones normales de carga. \\ \hline
+    \textbf{RNF4}   & Capacidad de interación (aprendizabilidad y operabilidad)     & La interfaz debe ser intuitiva y fácil de usar, con una curva de aprendizaje mínima para administradores y usuarios avanzados.                     \\ \hline
+    \textbf{RNF5}   & Compatibilidad (coexistencia) y portabilidad (adaptabilidad)  & La aplicación debe ser compatible con múltiples navegadores web modernos y adaptarse a diferentes tamaños de pantalla (responsive design).         \\ \hline
+    \textbf{RNF6}   & Mantenibilidad (modularidad y analizabilidad)                 & El código debe ser modular y bien documentado, facilitando futuras actualizaciones y correcciones de errores.                                      \\ \hline
+    \textbf{RNF7}   & Mantenibilidad (analizabilidad y capacidad de ser modificado) & La configuración de la aplicación debe estar documentada de manera clara y accesible, disponible en línea en el sitio web del proyecto.            \\ \hline
+    \textbf{RNF8}   & Portabilidad (adaptabilidad)                                  & La aplicación debe ser web.                                                                                                                        \\ \hline
+    \textbf{RNF9}   & Mantenibilidad                                                & La aplicacion debe ser de código abierto.                                                                                                          \\ \hline
+    \textbf{RNF10}  & Compatibilidad (interoperabilidad)                            & El sistema debe integrarse con Samba4 versión 4.16 y superiores.                                                                                   \\ \hline
 \end{longtable}
